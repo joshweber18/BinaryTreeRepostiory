@@ -26,10 +26,23 @@ namespace BST
             contestant.EmailAddress = Console.ReadLine();
         }
 
-        public static void GetRegistrationNumber(Contestant contestant)
+        public static void DisplayFirstName(Contestant contestant)
         {
-            Console.WriteLine("Please enter your 4 digit registration number.");
-            contestant.RegistrationNumber = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(contestant.FirstName);
+            Console.ReadLine();
         }
+
+        public static void DisplayLastName(Contestant contestant)
+        {
+            Console.WriteLine(contestant.LastName);
+            Console.ReadLine();
+        }
+
+        public static void DisplayEmail(Contestant contestant)
+        {
+            Console.WriteLine(contestant.EmailAddress);
+            Console.ReadLine();
+        }
+
     }
 }

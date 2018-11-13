@@ -6,7 +6,38 @@ using System.Threading.Tasks;
 
 namespace BST
 {
-    class Sweepstakes
+    public class Sweepstakes
     {
+        Dictionary<int, Contestant> Contestants = new Dictionary<int, Contestant>();
+        int RegistrationNumberAssigned = 1;
+
+        public void DisplayContestants()
+        {
+
+        }
+
+        public void RegisterContestants(Contestant contestant)
+        {
+            Contestants.Add(contestant.RegistrationNumber, contestant);
+            RegistrationNumberAssigned = contestant.RegistrationNumber;
+            RegistrationNumberAssigned++;
+            int key = contestant.RegistrationNumber;
+        }
+
+        public string PickContestantWinner()
+        {
+            string WinnerChoosen;
+            Random Winner = new Random();
+            int randomContestant = Winner.Next(1, Contestants.Count);
+            WinnerChoosen = Contestants[randomContestant].FirstName + " " + Contestants[randomContestant].LastName;
+            return WinnerChoosen;
+        }
+
+        public void PrintContestantInfo(Contestant contestant)
+        {
+            UI.DisplayFirstName(contestant);
+            UI.DisplayLastName(contestant);
+            UI.DisplayEmail(contestant);
+        }
     }
 }
