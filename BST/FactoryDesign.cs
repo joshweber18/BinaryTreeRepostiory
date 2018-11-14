@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace BST
 {
-    interface ISweepstakesManager
+    class FactoryDesign
     {
-        void InsertSweepstakes(Sweepstakes sweepstakes);
-
-
-
-
-        Sweepstakes GetSweepstakes();
-     
     }
 }

@@ -22,8 +22,8 @@ namespace BST
 
         Sweepstakes ISweepstakesManager.GetSweepstakes()
         {
-            Sweepstakes newSweepstake = sweepstakesQueue.Dequeue();
-                return newSweepstake;
+            Sweepstakes newQueueSweepstake = sweepstakesQueue.Dequeue();
+                return newQueueSweepstake;
         }
 
     }
