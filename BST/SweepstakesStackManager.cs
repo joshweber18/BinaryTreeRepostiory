@@ -8,7 +8,7 @@ namespace BST
 {
     class SweepstakesStackManager : ISweepstakesManager
     {
-        public Stack<Sweepstakes> sweepstakesStack;
+        Stack<Sweepstakes> sweepstakesStack;
 
         public SweepstakesStackManager()
         {

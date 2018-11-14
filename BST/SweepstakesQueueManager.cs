@@ -23,7 +23,7 @@ namespace BST
         Sweepstakes ISweepstakesManager.GetSweepstakes()
         {
             Sweepstakes newQueueSweepstake = sweepstakesQueue.Dequeue();
-                return newQueueSweepstake;
+            return newQueueSweepstake;
         }
 
     }

@@ -10,10 +10,11 @@ namespace BST
     {
         Dictionary<int, Contestant> Contestants = new Dictionary<int, Contestant>();
         int RegistrationNumberAssigned = 1;
+        string sweepstakesName;
 
-        public void Sweepstakes()
+        public Sweepstakes(string name)
         {
-
+            sweepstakesName = name;
         }
 
         public void RegisterContestant(Contestant contestant)
@@ -21,7 +22,6 @@ namespace BST
             Contestants.Add(contestant.RegistrationNumber, contestant);
             RegistrationNumberAssigned = contestant.RegistrationNumber;
             RegistrationNumberAssigned++;
-            int key = contestant.RegistrationNumber;
         }
 
         public string PickWinner()
