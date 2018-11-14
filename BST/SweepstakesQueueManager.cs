@@ -6,7 +6,25 @@ using System.Threading.Tasks;
 
 namespace BST
 {
-    class SweepstakesQueueManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
+        public Queue<Sweepstakes> sweepstakesQueue;
+
+        public SweepstakesQueueManager()
+        {
+            sweepstakesQueue = new Queue<Sweepstakes>();
+        }
+
+        public void InsertSweepstakes(Sweepstakes sweepstake)
+        {
+            sweepstakesQueue.Enqueue(sweepstake);
+        }
+
+        Sweepstakes ISweepstakesManager.GetSweepstakes()
+        {
+            Sweepstakes newSweepstake = sweepstakesQueue.Dequeue();
+                return newSweepstake;
+        }
+
     }
 }
